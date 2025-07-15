@@ -8,6 +8,6 @@ phases:
       - mvn clean package -Dmaven.test.skip=true
 artifacts:
   files:
-    - target/*.jar
+    - yudao-server/target/*.jar      
     - appspec.yml
     - script/**
