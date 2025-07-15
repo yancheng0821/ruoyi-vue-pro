@@ -4,12 +4,17 @@ files:
   - source: /
     destination: /home/ec2-user/app
 hooks:
+  BeforeInstall:
+    - location: script/pre.sh
+      timeout: 30
+      runas: root
+
   AfterInstall:
     - location: script/stop.sh
       timeout: 60
       runas: ec2-user
+
   ApplicationStart:
     - location: script/start.sh
-      runas: ec2-user
       timeout: 60
       runas: ec2-user
