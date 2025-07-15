@@ -5,10 +5,10 @@ files:
     destination: /home/ec2-user/app
 hooks:
   AfterInstall:
-    - location: scripts/stop.sh
+    - location: script/stop.sh
       timeout: 60
       runas: ec2-user
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: script/start.sh
       timeout: 60
       runas: ec2-user
