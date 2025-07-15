@@ -11,3 +11,4 @@ artifacts:
     - target/*.jar
     - appspec.yml
     - scripts/**
+  discard-paths: yes
